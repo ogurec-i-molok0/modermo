@@ -2,6 +2,7 @@
 @import '_global';
 @import '_fonts';
 
+
 // start header
 
 .header__top-inner{
@@ -28,7 +29,8 @@
 .header__btn-login{
     background-color: $green;
 }
-.header__btn-register{
+.header__btn-register,
+.header__btn-logout{
     background-color: $red;
     margin-left: 7px;
 }
@@ -50,6 +52,110 @@
     a{
         color: #fff;
         font-size: 14px;
+    }
+}
+.header__box{
+    display: flex;
+    align-items: center;
+}
+.header__circle{
+    &.active{
+        display: block;
+    }
+    display: none;
+    font-family: 'icomoon';
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+    & + .header__circle{
+        margin-left: 15px;
+    }
+    span{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        right: -7px;
+        top: -7px;
+        text-align: center;
+        line-height: 18px;
+        color: #fff;
+        font-size: 11px;
+    }
+}
+.notification{
+    span{
+        background-color: $yellow;
+    }
+}
+.massage{
+    span{
+    background-color: $tomate;
+    }
+}
+.basket{
+    span{
+    background-color: $green;
+    }
+}
+.header__btn-login--off{
+    display: none;
+}
+.header__btn-logout{
+    display: none;
+    &.header__btn-login--on{
+        display: block;
+    }
+}
+.user{
+    margin-left: 20px;
+    margin-right: 25px;
+    padding-right: 20px;
+    position: relative;
+    &::before{
+        position: absolute;
+        font-family: 'icomoon';
+        content: '\f105';
+        font-size: 16px;
+        color: #707070;
+        top: 0;
+        right: 0;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__images{
+        margin-right: 15px;
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__info{
+        line-height: 24px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__name{
+        font-family: Roboto;
+        color: #222;
+        
+    }
+    &__money{
+        font-family: Roboto;
+        color: $green;
+        font-weight: 700;
     }
 }
 
