@@ -77,8 +77,8 @@
         color: #a0a0a0;
         font-size: 14px;
     }
-    & + .header__circle{
-        margin-left: 15px;
+    &:hover::before{
+        color: #263238;
     }
     span{
         position: absolute;
@@ -100,12 +100,12 @@
 }
 .massage{
     span{
-    background-color: $tomate;
+        background-color: $tomate;
     }
 }
 .basket{
     span{
-    background-color: $green;
+        background-color: $green;
     }
 }
 .header__btn-login--off{
@@ -158,6 +158,161 @@
         font-weight: 700;
     }
 }
+.user__menu{
+    top: 70px;
+    left: 20px;
+    border: 0px solid #ccc;
+    position: absolute;
+    background-color: #fff;
+    padding: 0;
+    width: 158px;
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
+    a{
+        font-size: 12px;
+        font-weight: 400;
+        color: #546e7a;
+        margin-bottom: 15px;
+    }
+}
+.circle__menu{
+    position: absolute;
+    top: 69px;
+}
+.user__box,
+.basket__box,
+.massage__box,
+.notification__box{
+    position: relative;
+    margin-top: 40px;
+    height: 90px;
+    &:hover{
+        .user__menu{
+            height: auto;
+            border-width: 1px;
+            padding: 20px;
+            overflow: auto;
+        }
+    }
+}
+.circle__menu{
+    border-top: none;
+    top: 63px;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+.basket__box,
+.massage__box,
+.notification__box{
+    margin-top: 54px;
+    margin-left: 15px;
+    &:hover{
+        .circle__menu{
+            border-top: 1px solid #cccccc;
+            overflow: hidden;
+            height: auto;
+        }
+        .circle__item{
+            padding: 23px;
+            border-width: 1px;
+        }
+    }
+}
+.circle__item{
+    background-color: #fff;
+    border: 0px solid #cccccc;
+    border-top: none;
+    padding: 0 23px;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    width: 269px;
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 27px;
+        right: 28px;
+        color: #b0bec5;
+        font-size: 16px;
+    }
+
+}
+.circle__images{
+    margin-right: 15px;
+}
+.circle__info-name{
+    line-height: 23px;
+    color: #263238;
+    font-weight: 700;
+}
+.circle__info-thema{
+    font-size: 12px;
+    font-weight: 400;
+    color: #84b743;
+    line-height: 23px;
+}
+.circle__info-price{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 23px;
+}
+.circle__info-date{
+    font-size: 10px;
+    color: #90a4ae;
+    font-weight: 400;
+}
+.basket__summ{
+    padding: 16px 17px 12px;
+    border: 1px solid #cccccc;
+    border-top: none;
+    background-color: #fff;
+}
+.basket__title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13px;
+    padding-right: 22px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #263238;
+    line-height: 24px;
+}
+.basket__btn{
+    font-size: 14px;
+    font-weight: 700;
+    color: #f4f6f5;
+    background-color: #95c85a;
+    padding: 12px 5px;
+    text-align: center;
+    width: 100px;
+}
+.basket__btn-checkout{
+    width: 122px;
+    margin-left: 6px;
+    background-color: #e85647;
+}
+.notification__menu,
+.message__menu{
+    .circle__images{
+        margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .circle__info{
+        line-height: 18px;
+        font-family: 'Roboto-Regular', sans-serif;
+    }
+}
+.icons-color::before{
+    color: #ef6c00;
+}
+
 
 // end header
 // start search
